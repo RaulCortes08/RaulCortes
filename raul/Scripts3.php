@@ -7,19 +7,14 @@
 </head>
 <body>
     <?php
-        $secret_num=mt_rand(0,100);
-        
-        
+        $num=4;
+        $total=0;
 
-        for($i=0;$i<=100;$i++){
-
-            if($i==$secret_num){
-                echo "Tu numero es igual a $i";
-            }
-            
-
+        for ($i=0;$i<=$num;$i++){
+           $total=$total+$i;
         }
 
+        echo "The total is = $total";
 
 
 

@@ -7,8 +7,7 @@
 </head>
 <body>
     <?php
-        //$number=6843;
-        $number=readline();
+        $number=6843;
         $n = 0;
         if ($number>10000 or $number<1){
             echo "The number you declare its not valid";

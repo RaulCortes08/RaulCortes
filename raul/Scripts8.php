@@ -8,18 +8,16 @@
 <body>
     <?php
 
-        $number=456;
+$total=0;
+$number=0;
 
-        do {
-            
-            $number = sqrt($number);
-            echo $number ."<br>";
-
-
-
-        } while ($number<0);
-
-
+	do {
+	    $total = $number*$number;	  
+	   $number=readline();
+    	echo $total ."<br>";
+	  
+	}while($number>0);
+	echo "You introduce a negative number";
 
 
 

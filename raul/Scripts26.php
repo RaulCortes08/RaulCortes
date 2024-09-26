@@ -9,5 +9,16 @@ echo "<br><br><br><br>";
 $Unique_words = array_unique($array1);
 print_r($Unique_words);
 
+echo "<br><br><br><br>";
+
+//Compact
+$result=[];
+
+foreach($Unique_words as $key => $val){
+    if (isset($val)){
+        array_push($result, $val);
+    }
+}
+print_r($result);
 
 ?>

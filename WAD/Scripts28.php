@@ -3,7 +3,6 @@ $str = "                                          I like to eat bananas with cho
 foreach(count_chars($str, 1) as $i => $val) {
     echo "There were $val instance(s) of \"" , chr($i) , "\" in the string.<br>";
 }
-
 echo "<br><br><br><br>";
 foreach(count_chars(trim($str),1) as $i => $val) {
     if(chr($i) == " ") {
@@ -12,11 +11,4 @@ foreach(count_chars(trim($str),1) as $i => $val) {
 }
 echo "<br><br><br><br>";
 echo(str_replace("a", "", $str));
-
-
-
-
-
-
-
 ?>

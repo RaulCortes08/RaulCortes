@@ -6,7 +6,6 @@ lived afterwards at York, from whence he had married my mother, whose relations 
 function remove_punctuation($text) {
     return preg_replace("/[.,]/", "", $text);
 }
-$text = remove_punctuation($text);
-$array = explode(" ", $text);
+$text = remove_punctuation($text);$array = explode(" ", $text);
 print_r($array);
 ?>

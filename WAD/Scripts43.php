@@ -5,5 +5,18 @@ His works are notable for their profound influence on science fiction and on sur
 their innovative use of modernist literary techniques such as self-reflexivity, and their complex combination of positivist and romantic ideologies.
 Unless otherwise referenced, the information presented here is derived from the research of Volker Dehs, Jean-Michel Margot, Zvi Har’El, and William Butcher.";
 
-echo str_word_count($verne1);
+echo substr($verne1, -20, 20);
+echo "<br>";
+echo substr($verne1, 0, 20);
+echo "<br>";
+echo substr($verne1, 10, 20);
+echo "<br>";
+echo substr($verne1, -20, 10);
+echo "<br>";
 ?>
+
+
+
+
+
+

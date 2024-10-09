@@ -1,0 +1,23 @@
+td[colspan="2"],
+td[rowspan="2"] {
+  background-color: #234e54;
+}
+
+td[colspan="3"],
+td[rowspan="3"] {
+  background-color: #aca759;
+}
+
+td[rowspan="4"],
+td[colspan="4"] {
+  background-color: #cea885;
+}
+
+/* li[id^="pregunta"], li[id*="pregunta"] y li[id] son selectores que hacen referencia a lo mismo. Se emplean para poner en práctica los diferentes tipos de selectores */
+
+li[id^="pregunta"] {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 0.85em;
+  list-style-type: square;
+  color: #a300cc;
+}

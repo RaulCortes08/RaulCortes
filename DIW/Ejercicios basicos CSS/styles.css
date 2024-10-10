@@ -21,3 +21,28 @@ li[id^="pregunta"] {
   list-style-type: square;
   color: #a300cc;
 }
+span.negrita {
+  font-weight: bold;
+}
+
+li[id*="pregunta"] span.negrita {
+  background-color: #ff9;
+}
+
+.comentarios {
+  font-style: italic;
+  margin-left: 10%;
+  border: thin dotted #ac8159;
+  margin-right: 10%;
+}
+
+p.sin_recuadro + p {
+  text-decoration: underline;
+}
+
+li > a {
+  background-color: #755e8b;
+}
+span.cursiva {
+  font-style: italic;
+}

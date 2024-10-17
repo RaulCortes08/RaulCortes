@@ -1,0 +1,21 @@
+body{
+    background-color: rgb(255, 70, 70);
+}
+nav{
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    justify-content: end;
+    display: flex;
+    gap: 2rem;
+    margin-right: 1%;
+}
+#user{
+    justify-content: end;
+    display: flex;
+    gap: 2rem;
+    margin-right: 1%;
+    height: 2%;
+    width: 2%;
+    margin-top: 0.2%;
+}
+

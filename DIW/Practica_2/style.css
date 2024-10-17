@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(255, 70, 70);
+    background-color: rgb(235, 84, 84);
 }
 nav{
     color: white;
@@ -25,40 +25,53 @@ nav{
     margin-top: 1%;
     font-size: xx-large;
 }
-.fotos{
-    display: flex;
-    justify-content: left;
+article{
+    margin-right: 5%;
+}
+.grid3{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     margin-top: 1%;
-    margin-left: 10%;
-    margin-right: 10%;
-    gap: 2rem;
 }
-
-#cocheCalle{
-    width: 25%;
-    height: 25%;
-
+.contenido img{
+    width: 92%;
+    margin: 0 auto;
 }
-#cocheEvento{
-    width: 25%;
-    height: 25%;
-
+.contenido{
+width: 60%;
+margin: 0 auto;
 }
-#cocheCircuito{
-    width: 32%;
-    height: 25%;
-
-}
-.textos{
-    display: flex;
-    justify-content: left;
-    margin-top: 1%;
-    margin-left: 10%;
-    margin-right: 10%;
-    gap: 2rem;
+.texto{
+    height: 170px;
+    margin-top: 5px;
+    margin-right: 30px;
+    padding: 5px;
+    border: 1.5px solid rgb(255, 255, 255);
+    font-size: 1em;
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    border: 1px solid black;
+    
+}
+.contenido button{
+    background-color: rgb(255, 230, 0);
+    color: rgb(0, 0, 0);
+    font-size: 1em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: none;
+    margin: 0 auto;
+    width: 80%;
+    padding: 5px;
+    margin-left: 10%;
+    
 }
 
 
+}
+footer{
+    background-color: rgb(116, 13, 13);
+}
+footer,h2{
+    font-size: 1.6em;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

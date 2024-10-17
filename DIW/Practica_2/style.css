@@ -18,4 +18,47 @@ nav{
     width: 2%;
     margin-top: 0.2%;
 }
+#titulo{
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin-top: 1%;
+    font-size: xx-large;
+}
+.fotos{
+    display: flex;
+    justify-content: left;
+    margin-top: 1%;
+    margin-left: 10%;
+    margin-right: 10%;
+    gap: 2rem;
+}
+
+#cocheCalle{
+    width: 25%;
+    height: 25%;
+
+}
+#cocheEvento{
+    width: 25%;
+    height: 25%;
+
+}
+#cocheCircuito{
+    width: 32%;
+    height: 25%;
+
+}
+.textos{
+    display: flex;
+    justify-content: left;
+    margin-top: 1%;
+    margin-left: 10%;
+    margin-right: 10%;
+    gap: 2rem;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: 1px solid black;
+}
+
 

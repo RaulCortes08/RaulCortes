@@ -73,10 +73,11 @@ footer{
     
 }
 .footerT{
-    font-size: 1.6em;
+    font-size: 1.9em;
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-     margin-left: 5%;
+    margin-left: 5%;
+    margin-top: 1%;
 }
 .gridF{
     display: grid;

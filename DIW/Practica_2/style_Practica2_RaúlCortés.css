@@ -97,4 +97,48 @@ footer{
 .contenidoF{
     width: 60%;
     margin: 0 auto;
-    }
+}
+#localizacion{
+    width: 7%;
+    height: 7%;
+}
+#telefono{
+    width: 7%;
+    height: 7%;
+}
+#correo{
+    width: 7%;
+    height: 7%;
+}
+#instagram{
+    width: 10%;
+    height: 10%;
+    margin-left: 7%;
+}
+#facebook{
+    width: 10%;
+    height: 10%;
+    margin-left: 7%;
+}
+#twitter{
+    width: 15%;
+    height: 10%;
+    margin-left: 7%;
+    margin-right: 4%;
+}
+.contenidoF button{
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    font-size: 1em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: white 1px solid;
+    margin: 0 auto;
+    width: 80%;
+    padding: 5px;
+    margin-left: 10%;
+    margin-top: 10%;
+    height: 50px;
+    border-radius: 25px;
+  
+    
+}

@@ -1,0 +1,40 @@
+.centrado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin: 1rem 1rem;
+    border: 1px solid black;
+    width: 50rem;
+    
+}
+div div{
+    border: 1px solid black;
+    height: 15rem;
+    margin: 1rem 1rem;
+}
+.segunda-fila{
+    background-color: green;
+}
+.tercera-fila{
+    background-color: blue;
+}
+
+/* 
+Este es la modificacion para el ejercicio 9
+*/
+
+div div:last-of-type{
+    visibility: hidden;
+}
+
+div div:nth-child(3n -1){
+    visibility: hidden;
+}

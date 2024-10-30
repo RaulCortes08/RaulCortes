@@ -28,13 +28,15 @@ div div{
 }
 
 /* 
-Este es la modificacion para el ejercicio 9
+Este es la modificacion para el ejercicio 9 Parte 2
+
+
+div div:nth-child(4n){
+    display: none;
+}
+
+div div:nth-child(2n){
+    visibility: hidden;
+}
+
 */
-
-div div:last-of-type{
-    visibility: hidden;
-}
-
-div div:nth-child(3n -1){
-    visibility: hidden;
-}

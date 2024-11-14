@@ -1,6 +1,7 @@
 body{
     background-color: rgb(235, 84, 84);
     margin: 0;
+    
 }
 nav{
     color: white;
@@ -10,7 +11,7 @@ nav{
     gap: 2rem;
     margin-right: 1%;
     position: relative;
-    position: sticky;
+    
     
 }
 #user{
@@ -30,6 +31,9 @@ nav{
     text-align: center;
     margin-top: 1%;
     font-size: xx-large;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0; 
 }
 article{
     margin-right: 5%;
@@ -74,7 +78,7 @@ margin: 0 auto;
 }
 footer{
     background-color: rgb(116, 13, 13);
-    height: 38.8vh;
+    height: 50vh;
     width: 100%;
     margin-top: 2%;
     

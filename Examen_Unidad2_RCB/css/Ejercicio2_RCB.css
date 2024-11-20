@@ -1,0 +1,30 @@
+.contenedor{
+    border: 1px solid black;
+    width: 50vw;
+    color:blue;
+    font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    justify-content: center;
+    padding: 3%;
+}
+.primera{
+    margin-left: 2em;
+}
+.negrita{
+    font-weight: bold;
+}
+.cursiva{
+    font-style: italic;
+}
+.mayusculas{
+    text-transform: uppercase;
+}
+.subrayado{
+    text-decoration: underline;   
+}
+.tachado{
+    text-decoration: line-through;
+}
+.espaciado {
+    
+}

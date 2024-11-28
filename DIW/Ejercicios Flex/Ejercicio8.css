@@ -46,23 +46,17 @@ div.contenedor footer {
 	flex-flow:column;
 }
 .main1{
-	flex:100%;
 	display:flex;
 	flex-flow:column;
+	width: 20%;
 	margin: 1em;
 	border: 1px solid black;
 }
 .main2{
-	flex:100%;
 	display:flex;
 	flex-flow:column;
-	margin: 1em;
-	border: 1px solid black;
-}
-.main3{
-	flex:100%;
-	display:flex;
-	flex-flow:row-reverse;
+	height: 100%;
+	width: 20%;
 	margin: 1em;
 	border: 1px solid black;
 }

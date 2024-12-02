@@ -1,95 +1,61 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-  }
-  
-  .contenedor {
-    display: flex;
-    flex-direction: column;
-    height: 80vh;
-    width: 80vw;
-    margin-left: 10vw;
-    margin-top: 4vh;
-    border: 1px solid black;
-  }
-  
-  .header,
-  .footer {
-    text-align: center;
-    padding: 10px;
-    border: 1px solid black;
-    margin: 1em;
-  }
-  
-  .main {
-    display: flex;
-    flex: 1;
-    border: 1px solid black;
-    margin: 1em;
-  }
-  
-  .aside {
-    display: flex;
-    flex-direction: column;
-    width: 20%;
-    border-right: 1px solid black;
-    padding: 10px;
-  }
-  
-.arriba {
-    flex: 0 0 25%;
-    border: 1px solid black;
-    margin: 5px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.debajo {
-    flex: 0 0 70%;
-    border: 1px solid black;
-    margin: 5px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-  
-  
-  .flex-container {
+.contenedor{
     display: flex;
     flex-wrap: wrap;
-    flex: 1;
-    padding: 10px;
-    gap: 10px;
-    justify-content: flex-start;
-    align-content: flex-start;
-
-  }
-  
-  .caja {
-    flex: 1 1 calc(25% - 20px); /* 4 columnas ajustables */
-    border: 1px dashed blue;
-    text-align: center;
-    padding: 10px;
-    min-width: 120px;
-  }
-    .flex-container > .caja-derecha {
-        border: 1px dashed blue;
-        text-align: center;
-        padding: 10px;
-        min-width: 120px;
-        flex: 0 0 auto; /* No ocupará todo el div */
-        margin-left: auto; /* Fija la caja a la derecha */
-    }
-       
-  
-  .footer { 
-    padding: 10px;
-    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+    height: 90vh;
     border: 1px solid black;
-  }
+}
+
+.header{
+  display: flex;
+  width: 95%; 
+  height: 10%;
+  border: 1px solid black;
+
+}
+.body{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  width: 95%; 
+  height: 65%;
+  border: 1px solid black;
+}
+.arriba{
+  display: flex;
+  width: 15%; 
+  height: 20%;
+  border: 1px solid black;
+}
+.debajo{
+  display: flex;
+  width: 15%; 
+  height: 60%;
+  border: 1px solid black;
+}
+.caja-contenedor{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  align-items: center;
+  width: 80%; 
+  height: 90%;
+  border: 1px solid black;
+  gap: 15px;
+}
+.footer{
+  display: flex;
+  width: 95%; 
+  height: 10%;
+  border: 1px solid black;
+}
+.caja{
+  border: 0.5px dotted blue;
+  width: 20%;
+  height: 15%;
+}

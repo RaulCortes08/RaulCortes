@@ -6,6 +6,8 @@ div {
     padding: 0.5em;
     margin: 0.5em;
     text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 .element {
     border: 10px solid green;
@@ -17,9 +19,53 @@ div {
     border: 10px solid blue;
     padding: 0.5em;
     margin: 0.5em;
+    color: red;
 }
 .text {
     border: 10px solid red;
     padding: 0.5em;
     margin: 0.5em;
+    color: red;
+}
+
+@media (max-width: 1024px) {
+    .row {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr ;
+    }
+    .image{
+        color: green;
+
+    }
+    .text{
+        color: green;
+    }
+}
+
+@media (max-width: 768px) {
+    .row {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    .image{
+        color: blue;
+
+    }
+    .text{
+        color: blue;
+    }
+}
+
+@media (max-width: 576px) {
+    .row {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    .image{
+        color: black;
+
+    }
+    .text{
+        color: black;
+    }
 }

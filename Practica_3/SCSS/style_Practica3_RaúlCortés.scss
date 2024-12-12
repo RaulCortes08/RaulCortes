@@ -10,14 +10,14 @@ nav{
     display: flex;
     gap: 0.5rem;
     position: relative;
-    margin-left: 15%;
+    margin-left: 10%;
     
     
 }
 #user{
     justify-content: end;
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     margin-right: 1%;
     height: 10%;
     width: 10%;
@@ -68,7 +68,7 @@ margin: 0 auto;
 .contenido button{
     background-color: rgb(255, 230, 0);
     color: rgb(0, 0, 0);
-    font-size: 1em;
+    font-size: 0.5em;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     border: none;
     margin: 0 auto;
@@ -79,7 +79,7 @@ margin: 0 auto;
 }
 footer{
     background-color: rgb(116, 13, 13);
-    height: 110vh;
+    height: 180vh;
     width: 100%;
     margin-top: 2%;
     

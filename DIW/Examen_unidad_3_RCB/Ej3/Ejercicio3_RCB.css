@@ -1,0 +1,122 @@
+/* Asignamos border-box a todos los elementos para evitar descuadres al asignar padding y bordes (no aplica a margin) */
+*{
+	box-sizing: border-box;
+}
+
+/* Estilos generales de las cajas con el contenido */
+.caja{
+	margin-top: 0.25em;
+	background-color: lightblue;
+	height: 30vh;
+	min-height: 250px;	
+}
+
+/* La barra lateral se oculta por defecto */
+aside.caja{
+	display: none;
+	background-color: lightcoral;
+}
+
+/* Estilos de la caja con fondo de pantalla */
+#fondo{
+	background-image: url("../Ej3/img/content-is-like-water-2.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+/* Estilo del listado de la parte superior */
+nav.menu{
+	background-color: green;		
+}
+
+nav.menu ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;	
+	min-height: 50px;
+}
+
+/* Estilo de los ítems de menú */
+nav.menu li{	
+	text-align: center;
+	color: white;
+}
+
+nav.menu li:hover{
+	background-color: grey;
+	color: yellow
+}
+@media all and (min-width: 576px) {
+	nav.menu{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	nav.menu ul{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+	}
+	aside.caja{
+		display:none;
+	}
+	#fondo{
+		background-image: url("../Ej3/img/content-is-like-water-2.jpg");
+		background-repeat: no-repeat;
+		background-size: 50% 100%;
+		background-position: center;
+	}
+}
+
+@media all and (min-width: 768px) {
+	nav.menu{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	nav.menu ul{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+	}
+	.caja:last-of-type{
+		display: flex;
+	}
+	#fondo{
+		background-image: url("../Ej3/img/content-is-like-water-2.jpg");
+		background-repeat: no-repeat;
+		background-size: 50% 100%;
+		background-position: center;
+	}
+}
+
+@media all and (min-width: 992px) {
+	nav.menu{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	nav.menu ul{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+	}
+	aside.caja{
+		display:flex;
+		float: left;
+	}
+	#fondo{
+		background-image: url("../Ej3/img/content-is-like-water-2.jpg");
+		background-repeat: no-repeat;
+		background-size: 50% 100%;
+		background-position: center;
+	}
+	.caja:last-of-type{
+		width: 50%;
+	}
+	}
+	
+
+	
+
+

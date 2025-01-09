@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<audio loop autoplay muted preload="auto" >
+    <source src="mayorqueyo3.mp3" type="audio/mp3">
+    <source src="mayorqueyo3.ogg" type="audio/ogg">
+    Your browser does not support the audio element.
+</audio>
+<button onclick="playAudio()">Play</button>
+<button onclick="pauseAudio()">Pause</button>
+<button onclick="stopAudio()">Stop</button>
+<button onclick="volumeUp()">Volume Up</button>
+<button onclick="volumeDown()">Volume Down</button>
+<button onclick="audio.muted = !audio.muted">Mute</button>
+
+<script>
+    var audio = document.querySelector('audio');
+
+    function playAudio() {
+        audio.play();
+    }
+
+    function pauseAudio() {
+        audio.pause();
+    }
+
+    function stopAudio() {
+        audio.pause();
+        audio.currentTime = 0;
+    }
+
+    function volumeUp() {
+        if (audio.volume < 1) audio.volume += 0.1;
+    }
+
+    function volumeDown() {
+        if (audio.volume > 0) audio.volume -= 0.1;
+    }
+</script>
+</body>
+</html>

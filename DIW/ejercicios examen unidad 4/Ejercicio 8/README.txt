@@ -1,0 +1,1 @@
+El CSS está en el HTML para facilitar la visualización al ser dos archivos, pero se recuerda que debería ser un archivo externo

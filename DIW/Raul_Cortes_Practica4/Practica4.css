@@ -1,0 +1,97 @@
+body{
+    background-color: greenyellow;
+    color: black;
+    border: 5px solid black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+header{
+    background-color: grey;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    display: flex; 
+    justify-content:space-between;
+    border-bottom: 5px solid black;
+}
+header img{
+    width: 70px;
+    height: 70px;
+    align-self: center;
+}
+.localizacion{
+    margin: 0 auto;
+    align-self: center;
+    font-size: 2rem;
+}
+form{
+    background-color: lightgrey;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+.carrito{
+    margin-right: 5%;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: grey;
+    color: white;
+    border-bottom: 5px solid black;
+    font-size: 2rem;
+}
+.Amenu:hover{
+    background-color: black;
+    color: white;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    }
+
+.MasBuscadas{
+    padding: 10px;
+    background-color: grey;
+    color: white;
+    border-radius: 30%;
+    font-size: 2rem;
+    width: 20%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
+}
+.MasBuscadas:hover{
+    background-color: black;
+    color: white;
+}
+.fotos{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+.fotos img{
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    background: none;
+}
+.fotos img:hover{
+    transform: scale(1.3);
+}
+.descripcion{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    font-size: 2em;
+}
+.descripcion:hover{
+    background-color: black;
+    color: white;
+}

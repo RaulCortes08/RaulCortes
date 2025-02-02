@@ -3,6 +3,10 @@ body{
     color: black;
     border: 5px solid black;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    animation-name: drift;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
 }
 header{
     background-color: grey;
@@ -17,11 +21,16 @@ header img{
     width: 70px;
     height: 70px;
     align-self: center;
+    
 }
 .localizacion{
     margin: 0 auto;
     align-self: center;
     font-size: 2rem;
+}
+.localizacion:hover{
+    background-color: black;
+    color: white;
 }
 form{
     background-color: lightgrey;
@@ -68,7 +77,12 @@ a {
 .MasBuscadas:hover{
     background-color: black;
     color: white;
+    transform: scale(1.2) rotate(10deg);
 }
+.MasBuscadas {
+    transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
 .fotos{
     display: flex;
     justify-content: space-around;
@@ -80,6 +94,10 @@ a {
     height: 200px;
     margin: 10px;
     background: none;
+    animation-name: rotacion;
+    animation-duration: 0.2s;
+    animation-iteration-count: 45;
+    animation-timing-function: ease-in-out;
 }
 .fotos img:hover{
     transform: scale(1.3);
@@ -91,7 +109,69 @@ a {
     margin: 0 auto;
     font-size: 2em;
 }
-.descripcion:hover{
+.descripcionH:hover{
     background-color: black;
     color: white;
+}
+.videos{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+.audio{
+    margin: 0 auto;
+    align-self: center;
+}
+@keyframes rotacion {
+    0% { 
+        transform: rotate(0deg) scale(1); 
+    }
+    25% {
+        transform: rotate(90deg) scale(1.1); 
+    }
+    50% {
+        transform: rotate(180deg) scale(1.2); 
+    }
+    75% {
+        transform: rotate(270deg) scale(1.1); 
+    }
+    100% {
+        transform: rotate(360deg) scale(1); 
+    }
+}
+@keyframes drift {
+0% {
+    background-color: greenyellow;
+}
+25% {
+    background-color: orange;
+}
+50% {
+    background-color: red;
+}
+75% {
+    background-color: darkred;
+}
+100% {
+    background-color: black;
+}
+}
+
+.footer{
+    margin-top: 2%;
+    background-color: grey;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    display: flex; 
+    justify-content:space-between;
+    border-top: 5px solid black;
+    font-size: 2rem;
+}
+.footer img{
+    width: 50px;
+    height: 50px;
+    align-self: center;
+    
 }

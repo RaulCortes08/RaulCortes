@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="Practica4.css">
+</head>
+<body>
+    <header>
+        <picture class="logo">
+            <source srcset="./img/Logo-small.webp" type="image/webp" media="(max-width: 600px)">
+            <source srcset="./img/Logo-small.png" type="image/png" media="(max-width: 600px)">
+            <source srcset="./img/Logo-medium.webp" type="image/webp" media="(max-width: 1200px)">
+            <source srcset="./img/Logo-medium.png" type="image/png" media="(max-width: 1200px)">
+            <source srcset="./img/Logo-large.webp" type="image/webp">
+            <source srcset="./img/Logo-large.png" type="image/png">
+            <img src="./img/Logo-large.png" alt="Logo" sizes="(max-width: 600px) 100px, (max-width: 1200px) 200px, 300px">
+        </picture>
+        <form action="Practica4.php" method="POST">
+            <input type="text" name="busqueda" placeholder="Buscar">
+            <input type="submit" value="Buscar">
+        </form>
+        <audio controls autoplay loop class="audio">
+            <source src="./audios/Tokyo Drift - Teriyaki Boyz [ MUSIC VIDEO ] HD.ogg" type="audio/ogg">
+            <source src="./audios/Tokyo Drift - Teriyaki Boyz [ MUSIC VIDEO ] HD.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <p class="localizacion">Indique su localizacion</p>
+        <img src="./img/carrito.PNG" alt="carrito" class="carrito">
+        <img src="./img/Icono.PNG" alt="Icono" class="icono">
+    </header>
+    
+    <div>
+        <nav class="menu">
+            <a class="Amenu" href="Practica4.php">Recambios</a>
+            <a class="Amenu" href="Practica4.php">Piezas Nuevas</a>
+            <a class="Amenu" href="Practica4.php">Herramientas</a>
+            <a class="Amenu" href="Practica4.php">Accesorios y limpieza</a>
+        </nav>
+    </div>
+    <div class="MasBuscadas"><a href="Practica4.php">Piezas mas Buscadas</a></div>
+    <div class="fotos">
+        <img src="./img/ruedas.png" alt="1" class="foto">
+        <img src="./img/ruedas.png" alt="2" class="foto">
+        <img src="./img/ruedas.png" alt="3" class="foto">
+        <img src="./img/ruedas.png" alt="4" class="foto">
+    </div>
+    <div class="descripcion">
+        <p class="descripcionH">Ruedas Pirelli 18'</p>
+        <p class="descripcionH">Ruedas Pirelli 18'</p>
+        <p class="descripcionH">Ruedas Pirelli 18'</p>
+        <p class="descripcionH">Ruedas Pirelli 18'</p>
+    </div>
+    <div class="videos">
+        <video controls width="600" height="400">
+            <source src="./videos/Cómo cambiar una Rueda.mp4" type="video/mp4">
+            <source src="./videos/Cómo cambiar una Rueda.ogv" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+        <iframe width="600" height="400" src="https://www.youtube.com/embed/5SFvbs9W5KM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    
+    <div class="footer">
+        <p class="footerP">Devolucion de una pieza</p>
+        <p class="footerP">Ayuda y contacto</p>
+        <p class="footerP">Quienes somos?</p>
+        <p class="footerP">Nuestras redes sociales</p>
+        <img src="./img/instagram-logo.png" alt="Instagram" class="Instagram">
+        <img src="./img/facebook-logo.png" alt="Facebook" class="Facebook">
+        <img src="./img/twitter-logo.png" alt="Twitter" class="Twitter">
+        <img src="./img/tiktok-logo.png" alt="Tiktok" class="Tiktok">
+    </div>
+
+       
+</html>

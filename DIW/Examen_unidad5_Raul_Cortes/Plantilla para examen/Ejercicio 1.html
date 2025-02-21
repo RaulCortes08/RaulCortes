@@ -1,76 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-	<meta charset="utf-8"/>
-	<title>Ejercicio 1</title>
-	
-	<!-- Estilos en un fichero externo que no tendrás que modificar -->
-	<link rel="stylesheet" type="text/css" href="estilos1.css" />
-	
-	<script type="text/javascript">
-		document.addEventListener("DOMContentLoaded", () => {
-			// Constante con el desplazamiento que hay que llevar a cabo de 70%
-			const DESP = 70;
+    <meta charset="utf-8"/>
+    <title>Ejercicio 1</title>
+    <link rel="stylesheet" type="text/css" href="estilos1.css"/>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", () => {
+            const DESP = 70; // El desplazamiento de 70%
+            const pulsador = document.getElementById("pulsador");
+            const pelota = document.getElementById("pelota1");
+            const aviso = document.getElementById("aviso");
+            const inputSegundos = document.querySelector("input[name='segundos']");
 
-			//Para obtener el número de milisegundos en los que se ejecuta la animación según el input
-			function getMilisegundos(){
-				return document.querySelector("input[name='segundos']").value*1000;
-			}
+            // Función para obtener el valor de los segundos en milisegundos
+            function getMilisegundos() {
+                return parseInt(inputSegundos.value) * 1000;
+            }
 
-			// Aquí va la animación del cambio de color del texto
-			function cambioColor (){
-				var texto = document.getElementById("aviso");
-				var color = setTimeout(() => startTime(), 500);
-				
-				document.getElementById("aviso").animate({
-					duration:1000,
-					iterations:Infinity
-				})
-		
-				
-			}		
-			
-			// Esta función se encarga de desplazar la imagen			
-			function desplazar(){
-				var milisegundos = getMilisegundos();
-				var pelota = document.getElementById("pelota1");
-				
-				document.getElementById("pelota1").animate([
-					{ transform : 'translateX(DESP)'},
-				],{
-					duration: 2,
-					iterations: 1,
-					delay: milisegundos(),
-				});
-				// Resto de código
+            // Función que cambia el color del texto 'Pulsa' cada 500 ms
+            function cambioColorTexto() {
+                let colorToggle = true;
+                setInterval(() => {
+                    aviso.style.color = colorToggle ? 'red' : 'white';
+                    colorToggle = !colorToggle;
+                }, 500);
+            }
 
-			}
-										
-			// Click al pulsador
-			document.getElementById("pulsador").addEventListener("click", (e)=>{
-				let milisegundos = getMilisegundos();
-				
-				if (!isNaN(milisegundos) && milisegundos > 0){				
-					// Aquí comienza la secuencia de ocultar el pulsador y llamar a la función desplazar
-					document.getElementById("pulsador").style.display = "none";
+            // Función para mover la imagen después del retraso
+            function desplazarImagen() {
+                const milisegundos = getMilisegundos();
+                return new Promise((resolve) => {
+                    setTimeout(() => {
+                        pelota.animate([
+                            { transform: `translateX(0)` },
+                            { transform: `translateX(${DESP}%)` }
+                        ], {
+                            duration: 1000,
+                            fill: 'forwards'
+                        });
+                        resolve(); // Indicar que se completó la animación
+                    }, milisegundos); // Espera antes de iniciar la animación
+                });
+            }
 
-				} else {
-					alert("Debe introducir un número de segundos mayor que cero");
-				}				
-			});
-			
-			
-				
-		});
-	</script>
+            // Función para mostrar el pulsador después de la animación
+            function mostrarPulsador() {
+                pulsador.style.display = "block";
+            }
+
+            // Función que maneja todo el flujo de la animación
+            function ejecutarAnimacion() {
+                pulsador.style.display = "none"; // Ocultar el pulsador
+                cambioColorTexto(); // Iniciar el cambio de color del texto
+
+                desplazarImagen().then(() => {
+                    mostrarPulsador(); // Mostrar el pulsador al terminar la animación
+                });
+            }
+
+            // Evento de clic en el pulsador
+            pulsador.addEventListener("click", () => {
+                const milisegundos = getMilisegundos();
+                if (!isNaN(milisegundos) && milisegundos > 0) {
+                    ejecutarAnimacion(); // Ejecutar la secuencia
+                } else {
+                    alert("Debe introducir un número de segundos mayor que cero");
+                }
+            });
+        });
+    </script>
 </head>
 <body>
-	<img id="pelota1" class="pelota" src="pelota1.png"/>
-	<div id="contenedor">
-		<div id="pulsador" class="activador"><span>A rodar</span></div>
-		<input type="text" name="segundos" size="5" class="activador"></input>
-		<div id="aviso">¡Pulsa!</div>
-	</div>	
-
+    <img id="pelota1" class="pelota" src="pelota1.png"/>
+    <div id="contenedor">
+        <div id="pulsador" class="activador"><span>A rodar</span></div>
+        <input type="text" name="segundos" size="5" class="activador"/>
+        <div id="aviso">¡Pulsa!</div>
+    </div>
 </body>
 </html>

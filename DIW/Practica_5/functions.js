@@ -35,4 +35,41 @@ function startGame() {
     ball.classList.add("ball");
     document.body.appendChild(ball);
 
+    function moveBall() {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                const x = Math.random() * (window.innerWidth - 50);
+                const y = Math.random() * (window.innerHeight - 50);
+                ball.style.transform = `translate(${x}px, ${y}px)`;
+                resolve();
+            }, 1000);
+        });
+    }
+
+    let ballAnimation;
+    let ballInterval = setInterval(() => {
+        moveBall();
+    }, 2000); // Se mueve cada 2 segundos
+
+    function animateBall() {
+        ballAnimation = requestAnimationFrame(async () => {
+            await moveBall();
+            animateBall();
+        });
+    }
+
+    animateBall();
+
+    ball.addEventListener("click", async () => {
+        score++;
+        if (score >= 5) {
+            cancelAnimationFrame(ballAnimation);
+            clearInterval(ballInterval);
+            const winMessage = document.createElement("div");
+            winMessage.classList.add("win-message");
+            winMessage.innerHTML = "<h2>¡Ganaste!</h2>";
+            document.body.innerHTML = "";
+            document.body.appendChild(winMessage);
+        }
+    });
 }

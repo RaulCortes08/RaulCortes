@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Examen marzo</title>
+
+	<link rel="stylesheet" href="css/RCB.css" />
+	<script type="text/javascript">
+		document.addEventListener("DOMContentLoaded", () => {
+			// Recogemos un array con todos los cuadrados y el texto con el aviso
+			var cuadrados = document.querySelectorAll("div.cuadrado");
+			var textoAviso = document.getElementById("aviso");
+			cuadrados.forEach((one)=> {
+				one.style.opacity = "1"
+				})
+
+			//Para obtener el número de milisegundos en los que se ejecuta la animación según el input
+			function getMilisegundos(){
+				return document.querySelector("input[name='tiempo']").value*1000;
+			}
+
+			async function vanish() {
+			await new Promise((resolve, reject) => {
+				var milisegundos = getMilisegundos();
+				console.log("funciona")
+				cuadrados.forEach((one)=> {
+				one.style.opacity = "0"
+				})	
+			})
+		}
+		
+			// Evento onclick de los dos botones
+			document.getElementById("desvanecer").addEventListener("click", (e)=>{				
+				let milisegundos = getMilisegundos();
+				
+				if (!isNaN(milisegundos) && milisegundos > 0){				
+					aviso.style.display="block"
+					setTimeout(vanish,milisegundos)
+				} else {
+					alert("Debe introducir un número de segundos mayor que cero");
+				}
+			});
+			
+			
+			async function aparece() {
+			await new Promise((resolve, reject) => {
+				var milisegundos = getMilisegundos();
+				console.log("funciona")
+				cuadrados.forEach((one)=> {
+				one.style.opacity = "1"
+				
+				})	
+			})
+		}
+			document.getElementById("aparecer").addEventListener("click", (e)=>{
+				let milisegundos = getMilisegundos();
+				
+				if (!isNaN(milisegundos) && milisegundos > 0){				
+					aviso.style.display="none"
+					cuadrados.forEach((one)=> {
+					setTimeout(aparece,milisegundos)
+					})
+				} else {
+					alert("Debe introducir un número de segundos mayor que cero");
+				}
+			});
+			})
+			
+			
+		
+		
+
+
+	</script>
+	<style>
+		
+		
+	</style>
+</head>
+<body>
+	<!-- cuadrado1, cuadrado2 y cuadrado 3 son aquellos componentes sobre los que se aplican los efectos -->	
+	<div id="cuadrado1" class="cuadrado"></div>
+	<div id="cuadrado2" class="cuadrado"></div>
+	<div id="cuadrado3" class="cuadrado"><span id="aviso">Animación en curso</span></div>
+	<!-- input para seleccionar el tiempo en se ejecuta cada efecto o animación -->
+	<input type="number" value="0" name="tiempo"></input>
+	<!-- Botón que sirve para ocultar los elementos seleccionados -->
+	<input type="button" value="Desvanecer" id="desvanecer"></input>
+	<!-- Vuelve a mostrar aquellos componentes que se han ocultado -->
+	<input type="button" value="Aparecer todos" id="aparecer"></input>
+</body>
+</html>
+
